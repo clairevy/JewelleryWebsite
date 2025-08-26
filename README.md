@@ -26,7 +26,5 @@ Dự án "Jewellery Website" được xây dựng với mục đích luyện t�
 - Thực hành sử dụng **Bootstrap** để responsive.  
 - Áp dụng **JavaScript** để tạo hiệu ứng động.  
 - Làm quen với cách xây dựng cấu trúc file dự án web.  
-#� �J�e�w�e�l�l�e�r�y�W�e�b�s�i�t�e�
-�
-�
+
 
