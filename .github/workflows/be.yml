@@ -1,0 +1,44 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backend/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'backend/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.0.x'
+        
+    - name: Restore dependencies
+      working-directory: ./backend
+      run: dotnet restore
+      
+    - name: Build
+      working-directory: ./backend
+      run: dotnet build --no-restore --configuration Release
+      
+    - name: Publish
+      working-directory: ./backend
+      run: dotnet publish --configuration Release --output ./publish
+      
+    - name: Deploy to Somee
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: be.somee.com
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./backend/publish/
+        server-dir: /www.be.somee.com/
