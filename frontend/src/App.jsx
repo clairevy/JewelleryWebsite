@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Delivery from './pages/Delivery';
-import Payment from './pages/Payment';
-import Store from './pages/Store';
-import Contact from './pages/Contact';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Delivery from './pages/Delivery.jsx';
+import Payment from './pages/Payment.jsx';
+import Store from './pages/Store.jsx';
+import Contact from './pages/Contact.jsx';
 
 function App() {
   return (
