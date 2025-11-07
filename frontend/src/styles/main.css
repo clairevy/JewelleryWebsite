@@ -1,0 +1,43 @@
+.container1 {
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  flex-direction: column;
+}
+
+#header_section {
+  width: 100%;
+  height: 1000px;
+  background-image: url("../assets/image_header_section.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dropdown {
+  display: flex;
+  color: white;
+}
+
+.dropdown .btn.dropdown-toggle {
+  color: white;
+  border: none;
+  transition: all 0.3s;
+}
+
+.top-menu {
+  align-items: center;
+  height: 100%;
+}
+
+.dropdown .btn.dropdown-toggle:hover {
+  color: yellow !important;
+}
+
+/* Rest of the CSS from styles.css with image paths updated to use ../assets/ */
+/* Copy the rest of the styles from styles.css here */

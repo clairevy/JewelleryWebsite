@@ -33,8 +33,8 @@ jobs:
     - name: Deploy to Somee
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: fe.somee.com
+        server: feclaire.somee.com
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./frontend/dist/
-        server-dir: /www.fe.somee.com/
+        server-dir: /www.feclaire.somee.com/
